@@ -1,8 +1,0 @@
-{
-    "makefile.extensionOutputFolder": "./.vscode",
-    "files.associations": {
-        "stdlib.h": "c",
-        "errno.h": "c",
-        "stdint.h": "c"
-    }
-}
