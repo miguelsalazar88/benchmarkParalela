@@ -13,7 +13,7 @@
 #include <errno.h>
 #include <stdint.h>
 
-#define DATA_SIZE (1024*2024*64*3)
+#define DATA_SIZE (1024*1024*64*3)
 static int MEM_CHUNK[DATA_SIZE];
 
 int main(int argc, char *argv[]){
@@ -23,12 +23,15 @@ int main(int argc, char *argv[]){
     N = (int)atof(argv[1]);
     SIZE = N * N;
     int *a, *b, *c;
-    a = MEM_CHUNK;
-    b = *MEM_CHUNK + a;
-    c = *MEM_CHUNK + b;
+    a =  MEM_CHUNK;
+    b =  a + N * N;
+    c =  b + N * N;
     
-    //initMatriz(a,b,c,N);
-    //punto_prueba_inicial();
-    //multiplicacionMatricial(a,b,c,N);
-    //punto_prueba_final();
+    initMatriz(a,b,c,N);
+    punto_prueba_inicial();
+    impresionMatriz(a,N);
+    impresionMatriz(b,N);
+    multiplicacionMatricial(a,b,c,N);
+    impresionMatriz(c,N);
+    punto_prueba_final();
 }

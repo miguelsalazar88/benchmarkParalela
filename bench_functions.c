@@ -28,38 +28,41 @@ void punto_prueba_final(){
 
 }
 
-void initMatriz(int a[], int b[], int c[], int N){
+void initMatriz(int *a, int *b, int *c, int N){
 
     for (int i = 0; i < N; i++){
         for (int j = 0; j < N; j++){
-            a[i + j * N] = 1;
-            b[i + j * N] = 2;
+            a[i + j * N] = 3 * (i+j);
+            b[i + j * N] = 2 * (j-i);
             c[i + j * N] = 0;
         }   
     }
 }
     
     
-void multiplicacionMatricial(int a[], int b[], int c[], int N){
+void multiplicacionMatricial(int *matrizA, int *matrizB, int *matrizC, int N){
         
     for (int i = 0; i < N; i++) {
         for (int j=0; j<N; j++){
             int suma = 0;
-            for(int k = 0; k<N; k++){
-                suma += a[j+k*N]*b[k+i*N];
+            int *pA, *pB;
+            pA = matrizA + (j*N);
+            pB = matrizB + i;
+            for(int k = 0; k<N; k++, pA++, pB+=N){
+                suma += (*pA * *pB);
 
             }
-            c[j+i*N] = suma;
+            matrizC[j+i*N] = suma;
         }
     }
         
 }
     
-void impresionMatriz(int a[], int N){
+void impresionMatriz(int *matriz, int N){
     for (int i = 0; i < N; i++){
         printf("\n");
         for (int j = 0; j < N; j++){
-            printf("%d \t", a[i + j * N]);
+            printf("%d \t", matriz[i + j * N]);
         }
         
     }
