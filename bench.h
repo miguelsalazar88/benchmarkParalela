@@ -9,7 +9,7 @@
 
 void initMatriz(int *a, int *b, int *c, int N);
 
-void multiplicacionMatricial(int a[], int b[], int c[], int N);
+void multiplicacionMatricial(int *matrizA, int *matrizB, int *matrizC, int N);
 
 void impresionMatriz(int *matriz, int N);
 
