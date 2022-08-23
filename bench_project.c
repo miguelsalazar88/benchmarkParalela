@@ -27,11 +27,13 @@ int main(int argc, char *argv[]){
     b =  a + N * N;
     c =  b + N * N;
     
-    initMatriz(a,b,c,N);
+    initMatriz_int(a,b,c,N);
     punto_prueba_inicial();
-    impresionMatriz(a,N);
-    impresionMatriz(b,N);
-    multiplicacionMatricial(a,b,c,N);
-    impresionMatriz(c,N);
+    impresionMatriz_int(a,N);
+    impresionMatriz_int(b,N);
+    multiplicacionMatricial_int(a,b,c,N);
+    impresionMatriz_int(c,N);
     punto_prueba_final();
+
+    return 0;
 }
