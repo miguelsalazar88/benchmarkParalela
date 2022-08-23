@@ -52,10 +52,9 @@ void multiplicacionMatricial(int *matrizA, int *matrizB, int *matrizC, int N){
                 suma += (*pA * *pB);
 
             }
-            matrizC[j+i*N] = suma;
+            matrizC[j+i*N] = suma * (-1);
         }
-    }
-        
+    }     
 }
     
 void impresionMatriz(int *matriz, int N){
