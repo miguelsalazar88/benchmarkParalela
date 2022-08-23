@@ -12,6 +12,7 @@
 #include <time.h>
 #include <errno.h>
 #include <stdint.h>
+#include <unistd.h>
 
 struct timespec inicioCuenta, finCuenta;
 
@@ -28,6 +29,35 @@ void punto_prueba_final(){
 
 }
 
+// Funcion para crear enteros aleatorios
+
+int random_int(){
+    int min=0, max=9;
+    static int flag = -1;
+    if((flag =(flag < 0))){
+        srand(time(NULL) + getpid());
+    }
+    if(min>max){
+        return errno = EDOM, NAN;
+    }
+    return min + (int)rand()/((int)RAND_MAX/(max-min));
+
+
+}
+
+//Inicializa una matriz mediante la funcion de generacion de numeros random
+void initMatriz_int_rnd(int *a, int *b, int *c, int N){
+
+    for (int i = 0; i < N; i++){
+        for (int j = 0; j < N; j++){
+            a[i + j * N] = random_int();
+            b[i + j * N] = random_int();
+            c[i + j * N] = random_int();
+        }   
+    }
+}
+
+// Inicialización clásica de la matriz
 void initMatriz_int(int *a, int *b, int *c, int N){
 
     for (int i = 0; i < N; i++){

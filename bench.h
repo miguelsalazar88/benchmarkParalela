@@ -17,6 +17,10 @@ void punto_prueba_inicial();
 
 void punto_prueba_final();
 
+void initMatriz_int_rnd(int *a, int *b, int *c, int N);
+
+int random_int();
+
 
 #endif
 

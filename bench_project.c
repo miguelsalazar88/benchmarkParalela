@@ -29,10 +29,10 @@ int main(int argc, char *argv[]){
     
     initMatriz_int(a,b,c,N);
     punto_prueba_inicial();
-    impresionMatriz_int(a,N);
-    impresionMatriz_int(b,N);
+    //impresionMatriz_int(a,N);
+    //impresionMatriz_int(b,N);
     multiplicacionMatricial_int(a,b,c,N);
-    impresionMatriz_int(c,N);
+    //impresionMatriz_int(c,N);
     punto_prueba_final();
 
     return 0;
