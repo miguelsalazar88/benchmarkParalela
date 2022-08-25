@@ -25,7 +25,7 @@ void punto_prueba_final(){
     clock_gettime(CLOCK_MONOTONIC, &finCuenta);
     total_time = (finCuenta.tv_sec - inicioCuenta.tv_sec) * 1e9;
     total_time = (total_time + finCuenta.tv_nsec - inicioCuenta.tv_nsec) * 1e-9;
-    printf("%f", total_time);
+    printf("%f\n", total_time);
 
 }
 
