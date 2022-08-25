@@ -2,10 +2,10 @@
 
 # Fecha: 23 de Agosto de 2022
 # Autor: Miguel Salazar di Colloredo
-# Tem: Ejecución Automatizada de Benchmarks 
+# Tem: Ejecución Automatizada de Benchmark 
 
 
-# Vector para las cargas
+# Vector para las cargas  
 @carga = ("100","200","300");
 
 # Vector para los ejecutables
